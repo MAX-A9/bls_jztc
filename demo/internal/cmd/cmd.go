@@ -51,7 +51,6 @@ import (
 	contentController "demo/internal/controller/content"
 	contentClientController "demo/internal/controller/content/client"
 	exchangeController "demo/internal/controller/exchange"
-	licenseController "demo/internal/controller/license"
 	logController "demo/internal/controller/log"
 	mallController "demo/internal/controller/mall"
 	orderController "demo/internal/controller/order"
@@ -175,9 +174,6 @@ var (
 			// 添加CORS中间件进行域名访问控制
 			s.Use(middleware.CorsMiddleware)
 
-			// 添加授权验证中间件，确保所有API请求都经过授权验证
-			s.Use(middleware.LicenseAuth)
-
 			// 添加XSS防护中间件，对请求参数进行安全过滤
 			// 可以通过配置文件 manifest/config/config.yaml 中的 security.xss 配置项来控制
 			if g.Cfg().MustGet(ctx, "security.xss.enabled", true).Bool() {
@@ -267,16 +263,7 @@ var (
 			wxProductController := wxController.New()
 			exchangeRecordController := &exchangeController.Controller{}
 			shopCategoryController := &mallController.Controller{}
-			licenseController := licenseController.NewController()
 			statsController := &backend.StatsController{}
-
-			// 授权验证API路由组
-			s.Group("/license", func(group *ghttp.RouterGroup) {
-				// 添加响应处理中间件
-				group.Middleware(ghttp.MiddlewareHandlerResponse)
-				// 注册授权验证路由
-				licenseController.Register(group)
-			})
 
 			// API路由组 - 公开接口（登录、验证码和客户端内容）
 			s.Group("/", func(group *ghttp.RouterGroup) {

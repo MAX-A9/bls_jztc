@@ -74,7 +74,7 @@ export function getAppName(): string {
  * @returns API服务器地址
  */
 export function getApiServer(): string {
-  return getEnvVariable('API_SERVER', 'http://localhost:3001');
+  return getEnvVariable('API_SERVER', '');
 }
 
 // 导出环境变量对象，方便直接访问

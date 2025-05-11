@@ -26,7 +26,14 @@ manifest/docker/
 - 至少20GB磁盘空间
 
 ## 部署步骤
-1. 将build目录上传到Linux服务器
+
+1. 使用PowerShell构建应用
+   ```powershell
+   cd demo
+   ./build.ps1  # 生成build目录
+   ```
+
+2. 将build目录上传到Linux服务器
    ```bash
    # 在Windows上使用SCP上传
    scp -r build/ user@server:/build
@@ -35,7 +42,7 @@ manifest/docker/
    # 或使用其他文件传输工具
    ```
 
-2. 在Linux服务器上进入Docker目录并部署
+3. 在Linux服务器上进入Docker目录并部署
    ```bash
    cd /build/manifest/docker
    # 确保脚本使用LF行尾
@@ -119,6 +126,13 @@ manifest/docker/
 - 应用访问地址：http://服务器IP:8000
 - Swagger文档地址：http://服务器IP:8000/swagger
 
+## 数据库配置
+
+- 数据库主机：mysql
+- 数据库端口：3306
+- 数据库名：go-jztc
+- 用户名：go-jztc
+- 密码：BeAdwSKMbeiDpkHw
 
 ## 目录挂载
 
