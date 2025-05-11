@@ -87,7 +87,6 @@ CREATE TABLE IF NOT EXISTS `order` (
   KEY `idx_expire_time` (`expire_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='订单表';
 
-
 -- 创建内容表
 CREATE TABLE IF NOT EXISTS `content` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '内容ID',
@@ -147,26 +146,6 @@ CREATE TABLE IF NOT EXISTS `idle_category` (
   KEY `idx_is_active` (`is_active`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='闲置分类表';
 
--- 插入首页分类测试数据
-INSERT INTO `home_category` (`name`, `sort_order`, `is_active`, `icon`)
-VALUES 
-('手机数码', 1, 1, 'https://img.icons8.com/color/48/000000/smartphone.png'),
-('家用电器', 2, 1, 'https://img.icons8.com/color/48/000000/washing-machine.png'),
-('电脑办公', 3, 1, 'https://img.icons8.com/color/48/000000/laptop.png'),
-('服装鞋帽', 4, 0, 'https://img.icons8.com/color/48/000000/t-shirt.png'),
-('图书音像', 5, 1, 'https://img.icons8.com/color/48/000000/books.png')
-ON DUPLICATE KEY UPDATE `updated_at` = CURRENT_TIMESTAMP;
-
--- 插入闲置分类测试数据
-INSERT INTO `idle_category` (`name`, `sort_order`, `is_active`, `icon`)
-VALUES 
-('二手手机', 1, 1, 'https://img.icons8.com/color/48/000000/old-phone.png'),
-('二手电脑', 2, 1, 'https://img.icons8.com/color/48/000000/laptop-e-mail.png'),
-('闲置家电', 3, 1, 'https://img.icons8.com/color/48/000000/fridge.png'),
-('二手书籍', 4, 0, 'https://img.icons8.com/color/48/000000/book-shelf.png'),
-('闲置服装', 5, 1, 'https://img.icons8.com/color/48/000000/clothes.png')
-ON DUPLICATE KEY UPDATE `updated_at` = CURRENT_TIMESTAMP;
-
 -- 创建套餐表
 CREATE TABLE IF NOT EXISTS `package` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '套餐ID',
@@ -185,24 +164,6 @@ CREATE TABLE IF NOT EXISTS `package` (
   KEY `idx_deleted_at` (`deleted_at`),
   KEY `idx_sort_order` (`sort_order`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='套餐表';
-
--- 插入默认套餐数据 - 置顶套餐
-INSERT INTO `package` (`title`, `description`, `price`, `type`, `duration`, `duration_type`, `sort_order`, `created_at`)
-VALUES 
-('置顶一小时', '内容将在列表顶部显示一小时', 2.00, 'top', 1, 'hour', 1, CURRENT_TIMESTAMP),
-('置顶一天', '内容将在列表顶部显示24小时', 10.00, 'top', 1, 'day', 2, CURRENT_TIMESTAMP),
-('置顶三天', '内容将在列表顶部显示3天', 25.00, 'top', 3, 'day', 3, CURRENT_TIMESTAMP),
-('置顶一周', '内容将在列表顶部显示7天', 50.00, 'top', 7, 'day', 4, CURRENT_TIMESTAMP)
-ON DUPLICATE KEY UPDATE `updated_at` = CURRENT_TIMESTAMP;
-
--- 插入默认套餐数据 - 发布套餐
-INSERT INTO `package` (`title`, `description`, `price`, `type`, `duration`, `duration_type`, `sort_order`, `created_at`)
-VALUES 
-('7天展示', '发布内容可展示7天', 3.00, 'publish', 7, 'day', 1, CURRENT_TIMESTAMP),
-('15天展示', '发布内容可展示15天', 8.00, 'publish', 15, 'day', 2, CURRENT_TIMESTAMP),
-('30天展示', '发布内容可展示30天', 15.00, 'publish', 30, 'day', 3, CURRENT_TIMESTAMP),
-('60天展示', '发布内容可展示60天', 25.00, 'publish', 60, 'day', 4, CURRENT_TIMESTAMP)
-ON DUPLICATE KEY UPDATE `updated_at` = CURRENT_TIMESTAMP;
 
 -- 创建地区表
 CREATE TABLE IF NOT EXISTS `region` (
@@ -308,12 +269,6 @@ CREATE TABLE IF NOT EXISTS `mini_program` (
   KEY `idx_is_enabled` (`is_enabled`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='导航小程序表';
 
--- 初始化示例导航小程序数据
-INSERT INTO `mini_program` (`name`, `app_id`, `logo`, `is_enabled`, `order`, `created_at`, `updated_at`) VALUES
-('美团外卖', 'wx123456789', 'https://example.com/meituan.png', 1, 1, NOW(), NOW()),
-('滴滴出行', 'wx234567890', 'https://example.com/didi.png', 1, 2, NOW(), NOW()),
-('京东购物', 'wx345678901', 'https://example.com/jd.png', 1, 3, NOW(), NOW());
-
 -- 轮播图表
 CREATE TABLE IF NOT EXISTS `banner` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '轮播图ID',
@@ -328,12 +283,6 @@ CREATE TABLE IF NOT EXISTS `banner` (
   KEY `idx_order` (`order`),
   KEY `idx_is_enabled` (`is_enabled`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='轮播图表';
-
--- 初始化示例轮播图数据
-INSERT INTO `banner` (`image`, `link_type`, `link_url`, `is_enabled`, `order`, `created_at`, `updated_at`) VALUES
-('https://example.com/banner1.jpg', 'page', '/pages/index/detail?id=1', 1, 1, NOW(), NOW()),
-('https://example.com/banner2.jpg', 'page', '/pages/activity/detail?id=2', 1, 2, NOW(), NOW()),
-('https://example.com/banner3.jpg', 'page', '/pages/news/detail?id=3', 1, 3, NOW(), NOW());
 
 -- 活动区域表
 CREATE TABLE IF NOT EXISTS `activity_area` (
@@ -442,18 +391,6 @@ CREATE TABLE IF NOT EXISTS `inner_page_banner` (
   KEY `idx_type` (`banner_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='内页轮播图';
 
--- 添加首页内页轮播图示例数据
-INSERT INTO `inner_page_banner` (`image`, `link_type`, `link_url`, `is_enabled`, `order`, `banner_type`, `created_at`, `updated_at`) VALUES
-('https://example.com/inner_banner1.jpg', 'page', '/pages/content/detail?id=1', 1, 1, 'home', NOW(), NOW()),
-('https://example.com/inner_banner2.jpg', 'page', '/pages/content/detail?id=2', 1, 2, 'home', NOW(), NOW()),
-('https://example.com/inner_banner3.jpg', 'page', '/pages/promotion/detail?id=1', 1, 3, 'home', NOW(), NOW());
-
--- 添加闲置页内页轮播图示例数据
-INSERT INTO `inner_page_banner` (`image`, `link_type`, `link_url`, `is_enabled`, `order`, `banner_type`, `created_at`, `updated_at`) VALUES
-('https://example.com/idle_banner1.jpg', 'page', '/pages/idle/detail?id=1', 1, 1, 'idle', NOW(), NOW()),
-('https://example.com/idle_banner2.jpg', 'page', '/pages/idle/detail?id=2', 1, 2, 'idle', NOW(), NOW()),
-('https://example.com/idle_banner3.jpg', 'page', '/pages/idle/category?id=1', 1, 3, 'idle', NOW(), NOW());
-
 -- 创建底部导航栏表
 CREATE TABLE IF NOT EXISTS `bottom_tab` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
@@ -469,14 +406,6 @@ CREATE TABLE IF NOT EXISTS `bottom_tab` (
   KEY `idx_order` (`order`),
   KEY `idx_is_enabled` (`is_enabled`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='底部导航栏';
-
--- 添加底部导航栏示例数据
-INSERT INTO `bottom_tab` (`name`, `icon`, `selected_icon`, `path`, `order`, `is_enabled`, `created_at`, `updated_at`) VALUES
-('首页', 'https://example.com/icons/home.png', 'https://example.com/icons/home_selected.png', '/pages/index/index', 1, 1, NOW(), NOW()),
-('分类', 'https://example.com/icons/category.png', 'https://example.com/icons/category_selected.png', '/pages/category/index', 2, 1, NOW(), NOW()),
-('发布', 'https://example.com/icons/publish.png', 'https://example.com/icons/publish_selected.png', '/pages/publish/index', 3, 1, NOW(), NOW()),
-('消息', 'https://example.com/icons/message.png', 'https://example.com/icons/message_selected.png', '/pages/message/index', 4, 1, NOW(), NOW()),
-('我的', 'https://example.com/icons/profile.png', 'https://example.com/icons/profile_selected.png', '/pages/profile/index', 5, 1, NOW(), NOW());
 
 -- 创建小程序基础设置表
 CREATE TABLE IF NOT EXISTS `mini_program_settings` (
@@ -595,10 +524,6 @@ CREATE TABLE IF NOT EXISTS `client_duration` (
   KEY `idx_client_id` (`client_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='客户时长表';
 
--- 添加客户时长测试数据
-INSERT INTO `client_duration` (`client_id`, `client_name`, `remaining_duration`, `total_duration`, `used_duration`, `created_at`) VALUES
-(1, '测试客户', '3天18小时42分钟', '5天10小时30分钟', '1天15小时48分钟', NOW());
-
 -- 创建商品表
 CREATE TABLE IF NOT EXISTS `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '商品ID',
@@ -623,13 +548,6 @@ CREATE TABLE IF NOT EXISTS `product` (
   KEY `idx_sort_order` (`sort_order`),
   KEY `idx_created_at` (`created_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='商品表';
-
--- 插入示例商品数据
-INSERT INTO `product` (`name`, `category_id`, `category_name`, `price`, `duration`, `stock`, `status`, `sort_order`, `description`, `thumbnail`, `images`, `tags`, `sales`) VALUES
-('示例商品1', 1, '手机数码', 199.00, 3, 100, 1, 1, '这是示例商品1的详细描述', 'https://example.com/products/1/thumbnail.jpg', '[\"https://example.com/products/1/image1.jpg\",\"https://example.com/products/1/image2.jpg\"]', '手机,数码', 10),
-('示例商品2', 2, '家用电器', 299.00, 7, 50, 1, 2, '这是示例商品2的详细描述', 'https://example.com/products/2/thumbnail.jpg', '[\"https://example.com/products/2/image1.jpg\",\"https://example.com/products/2/image2.jpg\"]', '家用,电器', 5),
-('示例商品3', 3, '电脑办公', 399.00, 15, 0, 2, 3, '这是示例商品3的详细描述', 'https://example.com/products/3/thumbnail.jpg', '[\"https://example.com/products/3/image1.jpg\",\"https://example.com/products/3/image2.jpg\"]', '电脑,办公', 20),
-('示例商品4', 4, '服装鞋帽', 99.00, 1, 200, 0, 4, '这是示例商品4的详细描述', 'https://example.com/products/4/thumbnail.jpg', '[\"https://example.com/products/4/image1.jpg\",\"https://example.com/products/4/image2.jpg\"]', '服装,鞋帽', 0);
 
 -- 创建兑换列表表
 CREATE TABLE IF NOT EXISTS `exchange_record` (
