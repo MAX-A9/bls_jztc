@@ -1,0 +1,1 @@
+<view class="webview-container"><view wx:if="{{a}}" class="loading"><view class="loading-spinner"></view><text class="loading-text">加载中...</text></view><web-view src="{{b}}" bindmessage="{{c}}" binderror="{{d}}"></web-view></view>

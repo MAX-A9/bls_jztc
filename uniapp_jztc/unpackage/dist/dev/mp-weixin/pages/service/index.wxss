@@ -1,0 +1,458 @@
+
+	/* 保留基础容器和导航栏样式 */
+.container {
+		width: 100%;
+		min-height: 100vh;
+		position: relative;
+		background-color: #F8F8F8;
+}
+	
+	/* 背景渐变 */
+.header-bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 600rpx;
+		background: linear-gradient(
+			to right,
+			#d7e8fe,
+			#aacffc
+		);
+		mask-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 70%,
+			rgba(0, 0, 0, 0)
+		);
+		-webkit-mask-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 70%,
+			rgba(0, 0, 0, 0)
+		);
+		z-index: 0;
+}
+	
+	/* 导航栏背景 */
+.nav-bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(
+			to right,
+			#d7e8fe,
+			#aacffc
+		);
+		z-index: 2;
+}
+.nav-bar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+}
+.nav-content {
+		height: 44px;
+		display: flex;
+		align-items: center;
+		position: relative;
+}
+.back-btn {
+		position: absolute;
+		left: 0;
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+}
+.nav-title {
+		flex: 1;
+		text-align: center;
+		font-size: 16px;
+		color: #262626;
+		font-weight: 500;
+}
+	
+	/* 内容区域样式 */
+.content-scroll {
+		flex: 1;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		height: calc(100vh - var(--nav-height) - var(--settlement-height));
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+}
+.content-wrapper {
+		padding: 0 var(--content-padding);
+		position: relative;
+		padding-bottom: var(--content-bottom);
+}
+	
+	/* 底部结算栏样式 */
+.settlement-bar {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: var(--settlement-height);
+		background-color: #FFFFFF;
+		padding: 0 30rpx;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.04);
+		z-index: 100;
+}
+.submit-btn {
+		background: linear-gradient(135deg, #FF9500 0%, #FF5E3A 100%);
+		padding: 12rpx 40rpx;
+		border-radius: 48rpx;
+		width: 600rpx;
+		display: flex;
+		justify-content: center;
+}
+.btn-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rpx;
+}
+.main-text {
+		font-size: 28rpx;
+		color: #FFFFFF;
+		font-weight: 500;
+		line-height: 1.2;
+}
+.sub-text {
+		display: flex;
+		align-items: center;
+		gap: 4rpx;
+}
+.sub-text text {
+		font-size: 20rpx;
+		color: #E6F0FF;
+		line-height: 1.2;
+}
+	
+	/* 服务类型卡片样式 */
+.service-type-card {
+		background-color: #FFFFFF;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+		margin-top: var(--card-gap);
+}
+.card-title {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 600;
+		margin-bottom: 30rpx;
+}
+.service-type-list {
+		display: flex;
+		justify-content: space-between;
+		gap: 20rpx;
+}
+.service-type-item {
+		flex: 1;
+		background-color: #F8F8F8;
+		border-radius: 12rpx;
+		padding: 20rpx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: all 0.3s ease;
+}
+.service-type-item.active {
+		background-color: #E6F0FF;
+}
+.icon-wrapper {
+		width: 80rpx;
+		height: 80rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 16rpx;
+}
+.type-name {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 500;
+}
+.service-type-item.active .type-name {
+		color: #007AFF;
+}
+	
+	/* 安装类型卡片样式 */
+.install-type-card {
+		background-color: #FFFFFF;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		margin-top: var(--card-gap);
+		box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+.card-title {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 600;
+		margin-bottom: 30rpx;
+}
+.input-section {
+		position: relative;
+		margin-bottom: 20rpx;
+		width: 100%;
+}
+.demand-input {
+		width: 100%;
+		min-height: 120rpx;
+		background-color: #F8F8F8;
+		border-radius: 12rpx;
+		padding: 20rpx;
+		font-size: 28rpx;
+		color: #262626;
+		line-height: 1.5;
+		box-sizing: border-box;
+}
+.word-count {
+		position: absolute;
+		right: 20rpx;
+		bottom: 20rpx;
+		font-size: 24rpx;
+		color: #999999;
+		background-color: #F8F8F8;
+		padding: 0 4rpx;
+		z-index: 1;
+}
+.keywords-section {
+		margin-top: 30rpx;
+}
+.keywords-title {
+		font-size: 26rpx;
+		color: #666666;
+		margin-bottom: 16rpx;
+}
+.keywords-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16rpx;
+}
+.keyword-item {
+		padding: 12rpx 24rpx;
+		background-color: #F8F8F8;
+		border-radius: 26rpx;
+		transition: all 0.3s ease;
+}
+.keyword-item:active {
+		background-color: #E6F0FF;
+}
+.keyword-item text {
+		font-size: 26rpx;
+		color: #666666;
+}
+
+	/* 服务地址卡片样式 */
+.address-card {
+		background-color: #FFFFFF;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		margin-top: var(--card-gap);
+		box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+.card-title {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 600;
+		margin-bottom: 30rpx;
+}
+.address-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 120rpx;
+		background-color: #F8F8F8;
+		border-radius: 12rpx;
+		padding: 20rpx;
+}
+.address-placeholder {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		gap: 12rpx;
+}
+.address-placeholder text {
+		font-size: 28rpx;
+		color: #999999;
+}
+.address-info {
+		flex: 1;
+		margin-right: 20rpx;
+}
+.address-row {
+		display: flex;
+		align-items: center;
+		gap: 20rpx;
+		margin-bottom: 8rpx;
+}
+.name {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 500;
+}
+.phone {
+		font-size: 28rpx;
+		color: #666666;
+}
+.address-detail {
+		font-size: 26rpx;
+		color: #666666;
+		line-height: 1.4;
+}
+
+	/* 预约时间卡片样式 */
+.time-card {
+		background-color: #FFFFFF;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		margin-top: var(--card-gap);
+		box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+.card-title {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 600;
+		margin-bottom: 30rpx;
+}
+.time-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 100rpx;
+		background-color: #F8F8F8;
+		border-radius: 12rpx;
+		padding: 20rpx;
+}
+.time-placeholder {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		gap: 12rpx;
+}
+.time-placeholder text {
+		font-size: 28rpx;
+		color: #999999;
+}
+.time-info {
+		flex: 1;
+		font-size: 28rpx;
+		color: #262626;
+}
+
+	/* 物品图片卡片样式 */
+.image-card {
+		background-color: #FFFFFF;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		margin-top: var(--card-gap);
+		box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+.card-title {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 600;
+		margin-bottom: 30rpx;
+}
+.image-section {
+		margin-bottom: 30rpx;
+}
+.image-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20rpx;
+		margin-bottom: 12rpx;
+}
+.image-item {
+		width: 160rpx;
+		height: 160rpx;
+		position: relative;
+}
+.image-item image {
+		width: 100%;
+		height: 100%;
+		border-radius: 8rpx;
+}
+.delete-btn {
+		position: absolute;
+		top: -10rpx;
+		right: -10rpx;
+		width: 36rpx;
+		height: 36rpx;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.upload-btn {
+		width: 160rpx;
+		height: 160rpx;
+		background-color: #F8F8F8;
+		border-radius: 8rpx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 8rpx;
+}
+.upload-btn text {
+		font-size: 24rpx;
+		color: #666666;
+}
+.image-tip {
+		font-size: 24rpx;
+		color: #999999;
+}
+	
+	/* 备注信息卡片样式 */
+.note-card {
+		background-color: #FFFFFF;
+		border-radius: 16rpx;
+		padding: 30rpx;
+		margin-top: var(--card-gap);
+		box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.04);
+}
+.card-title {
+		font-size: 28rpx;
+		color: #262626;
+		font-weight: 600;
+		margin-bottom: 30rpx;
+}
+.note-section {
+		position: relative;
+}
+.note-input {
+		width: 100%;
+		min-height: 100rpx;
+		background-color: #F8F8F8;
+		border-radius: 12rpx;
+		padding: 20rpx;
+		font-size: 28rpx;
+		color: #262626;
+		line-height: 1.5;
+		box-sizing: border-box;
+}
+.word-count {
+		position: absolute;
+		right: 20rpx;
+		bottom: 20rpx;
+		font-size: 24rpx;
+		color: #999999;
+		background-color: #F8F8F8;
+		padding: 0 4rpx;
+		z-index: 1;
+}

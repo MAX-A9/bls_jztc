@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ../..
+      dockerfile: manifest/docker/Dockerfile
+    container_name: jztc-app
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=go-jztc
+      - DB_PASSWORD=BeAdwSKMbeiDpkHw
+      - DB_NAME=go-jztc
+    volumes:
+      - ../config:/app/manifest/config  # 配置文件挂载
+      - ../../logs:/app/logs  # 日志文件挂载
+    depends_on:
+      - mysql
+    networks:
+      - jztc-network
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8000/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+  mysql:
+    image: mysql:8.0
+    container_name: jztc-mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123456
+      - MYSQL_DATABASE=go-jztc
+      - MYSQL_USER=go-jztc
+      - MYSQL_PASSWORD=BeAdwSKMbeiDpkHw
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - jztc-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "go-jztc", "-pBeAdwSKMbeiDpkHw"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  jztc-network:
+    driver: bridge
+
+volumes:
+  mysql-data: 

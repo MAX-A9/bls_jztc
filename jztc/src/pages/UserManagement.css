@@ -1,0 +1,101 @@
+.user-management-container {
+  padding-bottom: 20px;
+  padding: 0;
+}
+
+.user-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.user-header::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.2), rgba(24, 144, 255, 0), rgba(24, 144, 255, 0));
+  bottom: 0;
+  left: 0;
+}
+
+.user-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.user-header h4::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  background: #1890ff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 表格样式 */
+.user-management-container .ant-table {
+  margin-top: 16px;
+}
+
+.user-management-container .ant-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.user-management-container .ant-card-body {
+  padding: 24px;
+}
+
+/* 状态标签样式 */
+.user-management-container .ant-tag {
+  min-width: 60px;
+  text-align: center;
+}
+
+/* 按钮间距 */
+.user-management-container .ant-space {
+  flex-wrap: wrap;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .user-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .user-header .ant-space {
+    margin-top: 16px;
+  }
+}
+
+.main-dashboard-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.main-dashboard-card .ant-card-body {
+  padding: 24px;
+} 

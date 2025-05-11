@@ -1,0 +1,288 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/community/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/message/index",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/publish/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/publish/draft/index",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/publish/idle/index",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/publish/info/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/publish/index",
+			"style": {
+				"navigationBarTitleText": "我的发布",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/follow/index",
+			"style": {
+				"navigationBarTitleText": "我的关注",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/favorite/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/history/index",
+			"style": {
+				"navigationBarTitleText": "浏览记录",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/orders/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/my/orders/detail",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/express/send/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/express/search/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/express/return/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/service/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/content/detail",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/community/detail",
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/vip/music/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/vip/exchange/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/vip/exchange/record",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/vip/video/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/master/join/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/settings/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/location/select/index",
+			"style": {
+				"navigationBarTitleText": "选择城市",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/chat/detail",
+			"style": {
+				"navigationBarTitleText": "聊天详情",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationStyle": "default",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"text": "",
+								"fontSrc": "/static/font/iconfont.ttf",
+								"fontSize": "24px",
+								"color": "#333333",
+								"float": "right",
+								"type": "more"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/notification/index",
+			"style": {
+				"navigationBarTitleText": "系统通知",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/agreement/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/webview/index",
+			"style": {
+				"navigationBarTitleText": "网页浏览",
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#ffffff"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "橘子同城",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"custom": true,
+		"color": "#999999",
+		"selectedColor": "#ff8c00",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/community/index",
+				"text": "闲置"
+			},
+			{
+				"pagePath": "pages/publish/index",
+				"text": "发布"
+			},
+			{
+				"pagePath": "pages/message/index",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/my/index",
+				"text": "我的"
+			}
+		]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"uniIdRouter": {},
+	"permission": {
+		"scope.userLocation": {
+			"desc": "您的位置信息将用于获取附近的服务信息和选择交易地点"
+		}
+	}
+}

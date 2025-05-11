@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/community/index",
+    "pages/message/index",
+    "pages/my/index",
+    "pages/publish/index",
+    "pages/publish/draft/index",
+    "pages/publish/idle/index",
+    "pages/publish/info/index",
+    "pages/my/publish/index",
+    "pages/my/follow/index",
+    "pages/my/favorite/index",
+    "pages/my/history/index",
+    "pages/my/orders/index",
+    "pages/my/orders/detail",
+    "pages/express/send/index",
+    "pages/express/search/index",
+    "pages/express/return/index",
+    "pages/service/index",
+    "pages/content/detail",
+    "pages/community/detail",
+    "pages/vip/music/index",
+    "pages/vip/exchange/index",
+    "pages/vip/exchange/record",
+    "pages/vip/video/index",
+    "pages/master/join/index",
+    "pages/settings/index",
+    "pages/location/select/index",
+    "pages/chat/detail",
+    "pages/notification/index",
+    "pages/agreement/index",
+    "pages/webview/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "橘子同城",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999999",
+    "selectedColor": "#ff8c00",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/community/index",
+        "text": "闲置"
+      },
+      {
+        "pagePath": "pages/publish/index",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation",
+    "choosePoi"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于获取附近的服务信息和选择交易地点"
+    }
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,24 @@
+"use strict";
+const apis_user = require("./user.js");
+require("../common/vendor.js");
+const apis_agreement = require("./agreement.js");
+const apis_settings = require("./settings.js");
+const apis_message = require("./message.js");
+const apis_publish = require("./publish.js");
+const apis_vip = require("./vip.js");
+const apis_share = require("./share.js");
+const user = apis_user.userApi;
+const agreement = apis_agreement.agreementApi;
+const settings = apis_settings.settingsApi;
+const message = apis_message.messageApi;
+const publish = apis_publish.publishApi;
+const vip = apis_vip.vipApi;
+const share = apis_share.shareApi;
+exports.agreement = agreement;
+exports.message = message;
+exports.publish = publish;
+exports.settings = settings;
+exports.share = share;
+exports.user = user;
+exports.vip = vip;
+//# sourceMappingURL=../../.sourcemap/mp-weixin/apis/index.js.map

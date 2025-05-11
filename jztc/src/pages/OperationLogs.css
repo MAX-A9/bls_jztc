@@ -1,0 +1,119 @@
+.operation-logs-container {
+  padding: 0;
+}
+
+.main-dashboard-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.main-dashboard-card .ant-card-body {
+  padding: 24px;
+}
+
+.operation-logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.operation-logs-header .header-left {
+  display: flex;
+  align-items: center;
+}
+
+.operation-logs-header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.operation-logs-header::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.2), rgba(24, 144, 255, 0), rgba(24, 144, 255, 0));
+  bottom: 0;
+  left: 0;
+}
+
+.operation-logs-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.operation-logs-header h4::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  background: #1890ff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.operation-logs-filter {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  margin-top: 16px;
+}
+
+.operation-logs-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+/* 表格样式 */
+.operation-logs-container .ant-table {
+  margin-top: 16px;
+}
+
+.operation-logs-container .ant-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.operation-logs-container .ant-card-body {
+  padding: 24px;
+}
+
+/* 标签样式 */
+.operation-logs-container .ant-tag {
+  min-width: 60px;
+  text-align: center;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .operation-logs-actions {
+    margin-top: 16px;
+  }
+  
+  .operation-logs-filter .ant-form-item {
+    margin-bottom: 12px;
+  }
+} 

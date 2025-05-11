@@ -1,0 +1,143 @@
+
+.news-container {
+		background-color: #ffffff;
+		padding: 20rpx 20rpx 120rpx;
+		height: 100%;
+}
+.news-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20rpx;
+		padding: 0 10rpx;
+}
+.news-title {
+		font-size: 32rpx;
+		font-weight: bold;
+		color: #333333;
+}
+.news-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20rpx;
+		padding: 0 10rpx;
+}
+.news-item {
+		display: flex;
+		flex-direction: column;
+		background: #ffffff;
+		border-radius: 12rpx;
+		overflow: hidden;
+		box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+.news-image {
+		width: 100%;
+		height: 320rpx;
+		object-fit: cover;
+}
+.news-content {
+		padding: 16rpx;
+		display: flex;
+		flex-direction: column;
+		gap: 8rpx;
+}
+.news-text {
+		font-size: 28rpx;
+		color: #333333;
+		font-weight: bold;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+}
+.news-desc {
+		font-size: 24rpx;
+		color: #666666;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		margin-bottom: 4rpx;
+}
+.location {
+		overflow: hidden;
+		margin-bottom: 8rpx;
+}
+.location-text {
+		font-size: 22rpx;
+		color: #999999;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+}
+.price-want {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 4rpx;
+}
+.price {
+		font-size: 30rpx;
+		color: #fc3e2b;
+		font-weight: bold;
+}
+.want-count {
+		font-size: 24rpx;
+		color: #999999;
+}
+	
+	/* 加载中样式 */
+.loading-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 300rpx;
+}
+.loading-indicator {
+		width: 40rpx;
+		height: 40rpx;
+		border: 4rpx solid #f0f0f0;
+		border-radius: 50%;
+		border-top-color: #fc3e2b;
+		animation: spin 1s linear infinite;
+		margin-bottom: 20rpx;
+}
+@keyframes spin {
+0% {
+			transform: rotate(0deg);
+}
+100% {
+			transform: rotate(360deg);
+}
+}
+.loading-text {
+		font-size: 26rpx;
+		color: #999999;
+}
+	
+	/* 加载更多提示 */
+.load-more {
+		text-align: center;
+		padding: 30rpx 0;
+}
+.load-more-text {
+		font-size: 26rpx;
+		color: #999999;
+}
+	
+	/* 空数据提示 */
+.empty-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 100rpx 0;
+}
+.empty-image {
+		width: 200rpx;
+		height: 200rpx;
+		margin-bottom: 30rpx;
+}
+.empty-text {
+		font-size: 28rpx;
+		color: #999999;
+}

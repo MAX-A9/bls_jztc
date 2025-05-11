@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "uni-icons": "../../../node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons"
+  }
+}

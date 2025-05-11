@@ -1,0 +1,150 @@
+
+.container {
+		min-height: 100vh;
+		background-color: #F8F8F8;
+		padding-bottom: env(safe-area-inset-bottom);
+}
+.nav-bar {
+		background-color: #FFFFFF;
+		padding: 0 30rpx;
+}
+.nav-content {
+		height: 44px;
+		display: flex;
+		align-items: center;
+		position: relative;
+}
+.back-btn {
+		padding: 20rpx;
+		margin-left: -20rpx;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+}
+.nav-title {
+		font-size: 34rpx;
+		font-weight: 500;
+		color: #333333;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 400rpx;
+		text-align: center;
+}
+.search-area {
+		background-color: #FFFFFF;
+		padding: 20rpx 30rpx;
+}
+.search-box {
+		display: flex;
+		align-items: center;
+		background-color: #F5F5F5;
+		border-radius: 32rpx;
+		padding: 0 24rpx;
+		height: 64rpx;
+}
+.search-box input {
+		flex: 1;
+		height: 100%;
+		margin: 0 16rpx;
+		font-size: 28rpx;
+}
+.placeholder {
+		color: #999999;
+		font-size: 28rpx;
+}
+.scan-btn {
+		padding: 10rpx;
+}
+.history-section {
+		margin-top: 20rpx;
+		background-color: #FFFFFF;
+		padding: 30rpx;
+}
+.section-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20rpx;
+}
+.section-title {
+		font-size: 30rpx;
+		font-weight: 600;
+		color: #333333;
+}
+.clear-btn {
+		display: flex;
+		align-items: center;
+		gap: 4rpx;
+}
+.clear-btn text {
+		font-size: 24rpx;
+		color: #999999;
+}
+.history-list {
+		display: flex;
+		flex-direction: column;
+		gap: 20rpx;
+}
+.history-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20rpx;
+		background-color: #F8F8F8;
+		border-radius: 12rpx;
+}
+.item-info {
+		display: flex;
+		flex-direction: column;
+		gap: 8rpx;
+}
+.express-number {
+		font-size: 28rpx;
+		color: #333333;
+		font-weight: 500;
+}
+.express-company {
+		font-size: 24rpx;
+		color: #666666;
+}
+.express-status {
+		font-size: 26rpx;
+}
+.express-status.delivered {
+		color: #67C23A;
+}
+.express-status.shipping {
+		color: #409EFF;
+}
+.company-section {
+		margin-top: 20rpx;
+		background-color: #FFFFFF;
+		padding: 30rpx;
+}
+.company-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30rpx;
+		padding: 20rpx 0;
+}
+.company-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8rpx;
+}
+.company-logo {
+		width: 80rpx;
+		height: 80rpx;
+		margin-bottom: 4rpx;
+}
+.company-name {
+		font-size: 24rpx;
+		color: #333333;
+		margin-bottom: 2rpx;
+}
+.company-phone {
+		font-size: 24rpx;
+		color: #007AFF;
+}

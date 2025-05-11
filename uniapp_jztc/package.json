@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.5.7",
+    "pinyin-pro": "^3.26.0",
+    "vuex": "^4.0.2"
+  }
+}

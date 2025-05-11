@@ -1,0 +1,119 @@
+# https://goframe.org/docs/web/server-config-file-template
+server:
+  address:     ":8000"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+  # 是否启用API文档访问，生产环境建议关闭
+  apiEnabled:  true
+
+# https://goframe.org/docs/core/glog-config
+logger:
+  level : "all"
+  stdout: true
+  path: "logs"
+
+# https://goframe.org/docs/core/gdb-config-file
+database:
+  default:
+    type: "mysql"
+    link: "数据库名称:数据库密码@tcp(127.0.0.1:3306)/数据库名称?loc=Asia%2FShanghai"
+    charset: "utf8mb4"
+    debug: true
+  
+# 安全配置
+security:
+  # CORS跨域配置
+  cors:
+    # 允许的域名列表，支持通配符（例如 *.example.com）
+    # 设置为 ["*"] 表示允许所有域名（不推荐生产环境使用）
+    allowedOrigins:
+      - "localhost"
+  
+  # XSS防护配置
+  xss:
+    # 是否启用XSS过滤
+    enabled: true
+    # 不进行XSS过滤的路径前缀列表
+    excludePaths:
+      - "/swagger"
+      - "/api.json"
+      - "/resource"
+      - "/assets"
+      - "/export"
+      - "/"
+      - "/static"
+      - "/js"
+      - "/css"
+      - "/favicon.ico"
+      - "/images"
+    # 日志级别: debug, info, warning, error
+    logLevel: "warning"
+
+# JWT配置
+jwt:
+  # JWT密钥 - 与原系统保持一致
+  secret: "SZvRkktWhJ5KSy4Y4Nkbz6n4T6RYsYUucTEHsk7NRamQKyyNrExmPNKJQyWZjdGm"
+  # JWT过期时间(秒)
+  expire: 604800  # 7天
+  # 刷新令牌过期时间(秒)
+  refreshExpire: 2592000  # 30天
+  # 算法
+  algorithm: "HS256"
+  # 发行人
+  issuer: "demo-server"
+
+# 验证码配置
+captcha:
+  # 验证码过期时间(秒)
+  expire: 300
+  # 验证码长度
+  length: 8
+  # 验证码宽度
+  width: 240
+  # 验证码高度
+  height: 80
+  # 验证码字体大小
+  fontSize: 30
+  # 验证码干扰线数量
+  noiseCount: 50
+  # 验证码干扰点数量
+  dotCount: 80
+  # 验证码字体文件路径(默认使用内置字体)
+  # fontPath: "resource/fonts/arial.ttf"
+  # 验证码缓存前缀
+  cachePrefix: "captcha:"
+
+# 用户信息配置
+user:
+  # 用户信息缓存前缀
+  cachePrefix: "user:"
+  # 用户信息缓存过期时间(秒)
+  cacheExpire: 3600
+  # 默认密码加密方式
+  passwordEncrypt: "md5"
+  # 用户状态
+  status:
+    # 正常状态
+    normal: 1
+    # 禁用状态
+    disabled: 0
+  # 用户角色
+  role:
+    # 超级管理员
+    superAdmin: 1
+    # 普通管理员
+    admin: 2
+
+# 订单配置
+order:
+  # 订单过期时间(分钟)
+  expireTime: 1
+  # 订单默认支付方式
+  defaultPaymentMethod: "wechat"
+  # 订单服务默认过期天数
+  defaultExpireDays: 30
+
+# 奖励配置
+reward:
+  # 过期奖励清理定时任务执行频率(每天0点执行)
+  cronCleanExpired: "0 0 0 * * *"

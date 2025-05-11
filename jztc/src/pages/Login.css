@@ -1,0 +1,75 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f8fa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3E%3Cg mask='url(%23SvgjsMask1026)' fill='none'%3E%3Cpath d='M 0,103 C 144,135.4 432,253.8 720,265 C 1008,276.2 1296,175.8 1440,151L1440 560L0 560z' fill='rgba(24, 144, 255, 0.16)'%3E%3C/path%3E%3Cpath d='M 0,410 C 144,383.4 432,274.2 720,277 C 1008,279.8 1296,390.4 1440,420L1440 560L0 560z' fill='rgba(24, 144, 255, 0.2)'%3E%3C/path%3E%3C/g%3E%3Cdefs%3E%3Cmask id='SvgjsMask1026'%3E%3Crect width='1440' height='560' fill='white'%3E%3C/rect%3E%3C/mask%3E%3C/defs%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='%231890ff' fill-opacity='0.08'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='30' cy='10' r='2'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3Ccircle cx='70' cy='10' r='2'/%3E%3Ccircle cx='90' cy='10' r='2'/%3E%3Ccircle cx='10' cy='30' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='50' cy='30' r='2'/%3E%3Ccircle cx='70' cy='30' r='2'/%3E%3Ccircle cx='90' cy='30' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='30' cy='50' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3Ccircle cx='70' cy='50' r='2'/%3E%3Ccircle cx='90' cy='50' r='2'/%3E%3Ccircle cx='10' cy='70' r='2'/%3E%3Ccircle cx='30' cy='70' r='2'/%3E%3Ccircle cx='50' cy='70' r='2'/%3E%3Ccircle cx='70' cy='70' r='2'/%3E%3Ccircle cx='90' cy='70' r='2'/%3E%3Ccircle cx='10' cy='90' r='2'/%3E%3Ccircle cx='30' cy='90' r='2'/%3E%3Ccircle cx='50' cy='90' r='2'/%3E%3Ccircle cx='70' cy='90' r='2'/%3E%3Ccircle cx='90' cy='90' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.login-content {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-title {
+  color: #1890ff !important;
+  margin-bottom: 0 !important;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  height: 45px;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 16px;
+  color: #888;
+}
+
+.login-copyright {
+  margin-top: 24px;
+  color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+} 

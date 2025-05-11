@@ -1,0 +1,62 @@
+
+	/* 底部操作栏样式 */
+.fixed-bottom {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100rpx;
+		background-color: #FFFFFF;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20rpx 0 12rpx;
+		z-index: 99;
+		padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-left {
+		display: flex;
+		gap: 8rpx;
+}
+.action-btn {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rpx;
+		min-width: 60rpx;
+		padding: 0 4rpx;
+}
+.share-button {
+		background: transparent;
+		border: none;
+		margin: 0;
+		padding: 0 4rpx;
+		line-height: normal;
+}
+.share-button::after {
+		border: none;
+}
+.action-text {
+		font-size: 22rpx;
+		color: #666666;
+		line-height: 1;
+}
+.action-text.active {
+		color: #fc3e2b;
+}
+.action-button {
+		background: linear-gradient(135deg, #fc3e2b 0%, #fa7154 100%);
+		padding: 0 40rpx;
+		border-radius: 40rpx;
+		border: none;
+		height: 72rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8rpx;
+}
+.button-text {
+		font-size: 28rpx;
+		color: #FFFFFF;
+		font-weight: 500;
+}

@@ -1,0 +1,134 @@
+
+	/* 添加全局变量 */
+page {
+		--menu-height: 88rpx;
+		--tab-bar-height: 100rpx;
+		--safe-bottom: env(safe-area-inset-bottom);
+}
+.community-container {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		background-color: #f5f5f5;
+		overflow: hidden;
+}
+	
+	/* 自定义导航栏样式 */
+.custom-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background: linear-gradient(180deg, #fc3e2b 0%, #fa7154 101%);
+}
+.nav-content {
+		display: flex;
+		align-items: center;
+		padding-left: 24rpx;
+		gap: 12rpx;
+}
+.page-title {
+		font-size: 32rpx;
+		font-weight: bold;
+		color: #ffffff;
+		flex-shrink: 0;
+		margin-right: 12rpx;
+		width: 64rpx;
+}
+.search-box {
+		height: 64rpx;
+		background-color: rgba(255, 255, 255, 0.9);
+		border-radius: 32rpx;
+		display: flex;
+		align-items: center;
+		padding: 0 24rpx;
+		gap: 8rpx;
+}
+.placeholder-text {
+		font-size: 26rpx;
+		color: #999999;
+}
+.page-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
+		margin-top: -20rpx;
+		background-color: #fa7154;
+		/* 确保内容区域高度正确 */
+		height: calc(100vh - var(--window-top));
+}
+	
+	/* 移除之前的渐变背景 */
+.page-content::before {
+		display: none;
+}
+	
+	/* 菜单导航样式 */
+.menu-nav {
+		background-color: #ffffff;
+		border-top-left-radius: 30rpx;
+		border-top-right-radius: 30rpx;
+		width: 100%;
+		position: relative;
+		z-index: 2;
+		margin-top: 20rpx;
+}
+.menu-scroll {
+		width: 100%;
+		white-space: nowrap;
+}
+.menu-list {
+		display: flex;
+		padding: 0 16rpx;
+		height: 88rpx;
+}
+.menu-item {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 12rpx;
+		position: relative;
+}
+.menu-text {
+		font-size: 28rpx;
+		color: #333333;
+		line-height: 88rpx;
+		padding: 0 4rpx;
+}
+.menu-item.active .menu-text {
+		color: #fc3e2b;
+		font-weight: bold;
+}
+.menu-item.active::after {
+		content: '';
+		position: absolute;
+		bottom: 16rpx;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 32rpx;
+		height: 4rpx;
+		background-color: #fc3e2b;
+		border-radius: 2rpx;
+}
+.content-scroll {
+		flex: 1;
+		background-color: #ffffff;
+		/* 调整上边距和内边距 */
+		margin-top: -20rpx;
+		padding-top: 20rpx;
+		/* 使用更精确的高度计算 */
+		height: calc(100% - var(--menu-height));
+		/* 添加溢出处理 */
+		overflow: hidden;
+}
+.content-wrapper {
+		min-height: 100%;
+		/* 使用更可靠的底部内边距计算 */
+		padding-bottom: calc(var(--safe-bottom) + var(--tab-bar-height) + 40rpx);
+}
+.content-list {
+		padding: 0;
+}

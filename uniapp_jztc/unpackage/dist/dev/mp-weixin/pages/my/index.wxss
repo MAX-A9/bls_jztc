@@ -1,0 +1,258 @@
+
+.my-container {
+		min-height: 100vh;
+		background-color: #f5f5f5;
+		padding-bottom: env(safe-area-inset-bottom);
+		position: relative;
+}
+.gradient-bg {
+		background: linear-gradient(180deg, rgba(252, 62, 43, 0.95) 0%, rgba(255, 100, 51, 0.9) 100%);
+		padding-bottom: 45rpx;
+}
+.content-card {
+		position: relative;
+		margin-top: -35rpx;
+		background-color: #ffffff;
+		min-height: calc(100vh - 350rpx);
+		border-radius: 40rpx 40rpx 0 0;
+		padding: 20rpx 30rpx;
+		padding-bottom: calc(120rpx + env(safe-area-inset-bottom));
+		z-index: 1;
+		box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.02);
+}
+.status-bar {
+		width: 100%;
+}
+.nav-bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+}
+.nav-left {
+		position: absolute;
+		left: 30rpx;
+		display: flex;
+		align-items: center;
+		z-index: 1;
+}
+.nav-title {
+		text-align: center;
+		font-size: 34rpx;
+		font-weight: 500;
+		color: #ffffff;
+}
+.user-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20rpx 30rpx;
+}
+.user-info {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		margin-right: 20rpx;
+}
+.avatar {
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+		margin-right: 24rpx;
+		border: 4rpx solid rgba(255, 255, 255, 0.3);
+}
+.user-detail {
+		display: flex;
+		flex-direction: column;
+}
+.nickname {
+		font-size: 32rpx;
+		font-weight: 500;
+		color: #ffffff;
+		margin-bottom: 8rpx;
+}
+.phone {
+		font-size: 26rpx;
+		color: rgba(255, 255, 255, 0.8);
+}
+.white {
+		color: #ffffff;
+}
+.white-light {
+		color: rgba(255, 255, 255, 0.8);
+}
+.setting-btn {
+		width: 80rpx;
+		height: 80rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+.feature-bar {
+		display: flex;
+		justify-content: space-around;
+}
+.feature-wrapper {
+		margin: 0 30rpx;
+		padding: 30rpx 20rpx;
+		background: rgba(255, 255, 255, 0.25);
+		border-radius: 16rpx;
+		-webkit-backdrop-filter: blur(10px);
+		        backdrop-filter: blur(10px);
+}
+.feature-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+.feature-num {
+		font-size: 32rpx;
+		font-weight: 500;
+		color: #ffffff;
+		margin-bottom: 8rpx;
+}
+.feature-name {
+		font-size: 24rpx;
+		color: rgba(255, 255, 255, 0.8);
+}
+.sign-btn {
+		display: flex;
+		align-items: center;
+		padding: 12rpx 20rpx;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 30rpx;
+		border: 1rpx solid rgba(255, 255, 255, 0.3);
+}
+.sign-text {
+		font-size: 24rpx;
+		color: #ffffff;
+		margin-left: 8rpx;
+}
+.card {
+		background-color: #ffffff;
+		border-radius: 24rpx;
+		box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.08);
+		border: 1rpx solid rgba(0, 0, 0, 0.03);
+}
+.order-section {
+		padding: 20rpx;
+}
+.section-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20rpx;
+}
+.section-title {
+		font-size: 32rpx;
+		font-weight: bold;
+		color: #000000;
+}
+.more-btn {
+		display: flex;
+		align-items: center;
+}
+.more-text {
+		font-size: 26rpx;
+		color: #999999;
+		margin-right: 4rpx;
+}
+.order-types {
+		display: flex;
+		justify-content: space-around;
+		padding: 10rpx 0;
+		width: 100%;
+		margin: 0 auto;
+}
+.order-type-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 12rpx;
+		flex: 1;
+}
+.type-name {
+		font-size: 26rpx;
+		color: #000000;
+		margin-top: 12rpx;
+}
+.manager-card {
+		margin-top: 30rpx;
+}
+.manager-content {
+		padding: 30rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+}
+.manager-text {
+		font-size: 30rpx;
+		color: #000000;
+}
+.function-card {
+		margin-top: 30rpx;
+}
+.function-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		padding: 10rpx 0;
+		gap: 0;
+}
+.function-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10rpx 0;
+}
+.function-name {
+		font-size: 26rpx;
+		color: #000000;
+		margin-top: 8rpx;
+}
+.qrcode-popup {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 999;
+}
+.qrcode-container {
+		width: 600rpx;
+		background-color: #ffffff;
+		border-radius: 20rpx;
+		padding: 40rpx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+}
+.qrcode-image {
+		width: 400rpx;
+		height: 400rpx;
+		margin-bottom: 30rpx;
+}
+.qrcode-tip {
+		font-size: 28rpx;
+		color: #666666;
+		margin-bottom: 20rpx;
+}
+.close-btn {
+		position: absolute;
+		top: 20rpx;
+		right: 20rpx;
+		width: 60rpx;
+		height: 60rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+}
+	
+	/* 添加点击样式 */
+.user-info:active {
+		opacity: 0.8;
+}

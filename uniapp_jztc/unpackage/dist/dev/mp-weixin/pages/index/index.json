@@ -1,0 +1,13 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "disableScroll": true,
+  "usingComponents": {
+    "function-area": "../../components/function-area/index",
+    "swiper-banner": "../../components/swiper-banner/index",
+    "content-list": "../../components/content-list/index",
+    "activity-area": "../../components/activity-area/index",
+    "tab-bar": "../../components/tab-bar/index",
+    "uni-icons": "../../node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons"
+  }
+}

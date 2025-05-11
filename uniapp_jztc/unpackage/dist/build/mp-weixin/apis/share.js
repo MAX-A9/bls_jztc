@@ -1,0 +1,1 @@
+"use strict";const e=require("../utils/request.js");const t=Object.freeze(Object.defineProperty({__proto__:null,getShareSettings:function(){return e.get("/wx/share/settings")}},Symbol.toStringTag,{value:"Module"}));exports.shareApi=t;

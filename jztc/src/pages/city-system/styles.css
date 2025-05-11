@@ -1,0 +1,112 @@
+/* 同城系统页面公共样式 */
+.mini-program-container {
+  padding: 0;
+}
+
+/* 小程序设置特定样式 */
+.mp-settings-tabs .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.mp-settings-tabs .ant-tabs-tab {
+  font-size: 15px;
+  padding: 8px 16px;
+}
+
+.version-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.version-description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.version-table {
+  margin-top: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .mp-settings-tabs .ant-tabs-tab {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  .ant-form-item-label > label {
+    font-size: 14px;
+  }
+}
+
+.tab-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.tab-header .ant-btn {
+  margin-left: 10px;
+}
+
+/* 小程序Logo上传样式 */
+.logo-upload-container {
+  margin-top: 8px;
+}
+
+.logo-preview {
+  width: 128px;
+  height: 128px;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.logo-preview:hover .logo-actions {
+  transform: translateY(0);
+}
+
+.upload-button {
+  width: 128px;
+  height: 128px;
+  border: 1px dashed #d9d9d9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-button:hover {
+  border-color: #1890ff;
+}
+
+.upload-button .anticon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #999;
+} 

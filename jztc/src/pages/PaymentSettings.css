@@ -1,0 +1,150 @@
+.payment-settings-container {
+  padding: 0;
+}
+
+.payment-settings-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.payment-settings-card .ant-card-body {
+  padding: 24px;
+}
+
+/* 支付设置标题区 */
+.payment-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.payment-settings-header::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.2), rgba(24, 144, 255, 0), rgba(24, 144, 255, 0));
+  bottom: 0;
+  left: 0;
+}
+
+.payment-settings-header h4.ant-typography {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.payment-settings-header h4.ant-typography::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  background: #1890ff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 支付设置表单样式 */
+.payment-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+}
+
+.section-header .ant-typography {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.section-header .ant-form-item {
+  margin-bottom: 0;
+}
+
+.section-header .ant-form-item-label {
+  padding-bottom: 0;
+}
+
+.section-header .ant-form-item-label > label {
+  height: auto;
+  margin-bottom: 0;
+}
+
+.payment-section .ant-form-item {
+  margin-bottom: 24px;
+}
+
+.payment-section .ant-form-item-label > label {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.payment-section .ant-input,
+.payment-section .ant-input-password {
+  border-radius: 4px;
+}
+
+.payment-section .ant-switch {
+  margin-right: 8px;
+}
+
+.payment-section .ant-divider {
+  margin: 16px 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .payment-settings-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .payment-settings-header .ant-space {
+    margin-top: 16px;
+  }
+  
+  .payment-section {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .payment-settings-header .ant-space {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-settings-header .ant-btn {
+    margin-top: 8px;
+    width: 100%;
+  }
+} 

@@ -1,0 +1,25 @@
+/* CustomerDuration页面专用样式 */
+
+/* 保证客户ID等字段横向正常显示 */
+.customer-duration-table .ant-table-cell {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+/* 确保表格内容不会换行或被切断 */
+.customer-duration-table .ant-table-tbody > tr > td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 适当调整表格行高 */
+.customer-duration-table .ant-table-tbody > tr {
+  height: 56px;
+}
+
+/* 客户ID列特定样式 */
+.customer-id-column {
+  font-family: Consolas, Monaco, monospace;
+  font-weight: 500;
+} 

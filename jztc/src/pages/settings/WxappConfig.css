@@ -1,0 +1,146 @@
+.wxapp-config-container {
+  padding: 0;
+  width: 100%;
+}
+
+.wxapp-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.wxapp-card .ant-card-body {
+  padding: 24px;
+}
+
+/* 微信配置标题区 */
+.wxapp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.wxapp-header::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.2), rgba(24, 144, 255, 0), rgba(24, 144, 255, 0));
+  bottom: 0;
+  left: 0;
+}
+
+.wxapp-header h4.ant-typography {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.wxapp-header h4.ant-typography::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  background: #1890ff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 表单样式 */
+.wxapp-form {
+  margin: 0 auto;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+/* 操作按钮区域 */
+.form-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .wxapp-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .wxapp-header h4 {
+    margin-bottom: 16px;
+  }
+  
+  .wxapp-form .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .wxapp-form .ant-form-item-label {
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .wxapp-header .ant-space {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wxapp-header .ant-btn {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+/* 表单元素自适应 */
+.wxapp-form .ant-input, 
+.wxapp-form .ant-select,
+.wxapp-form .ant-input-password,
+.wxapp-form .ant-btn {
+  width: 100%;
+}
+
+.wxapp-warning {
+  margin-top: 20px;
+}
+
+.wxapp-info {
+  margin-bottom: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.ant-form-item-label > label.ant-form-item-required::before {
+  display: inline-block;
+  margin-right: 4px;
+  color: #ff4d4f;
+  font-size: 14px;
+  font-family: SimSun, sans-serif;
+  line-height: 1;
+  content: '*';
+}
+
+.wxapp-form-container {
+  min-height: 300px;
+} 

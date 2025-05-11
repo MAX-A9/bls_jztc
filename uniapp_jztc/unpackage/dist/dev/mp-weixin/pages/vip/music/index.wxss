@@ -1,0 +1,357 @@
+
+.container {
+		min-height: 100vh;
+		background: linear-gradient(180deg, 
+			#21242d 0%, 
+			#21242d 40%, 
+			#1f2123 45%,
+			#1d1f1e 48%,
+			#1b1d1a 50%,
+			#191b17 52%,
+			#181a16 55%,
+			#181a15 60%,
+			#181a15 100%
+		);
+		padding-bottom: calc(env(safe-area-inset-bottom) + 120rpx);
+}
+	
+	/* 导航栏样式 */
+.nav-bar {
+		position: relative;
+		z-index: 100;
+}
+.nav-content {
+		height: 44px;
+		display: flex;
+		align-items: center;
+		position: relative;
+}
+.back-btn {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 20rpx;
+		margin-left: 10rpx;
+		z-index: 1;
+}
+.nav-title {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 34rpx;
+		color: #ffecd8;
+		font-weight: 500;
+}
+.header {
+		margin-top: 40rpx;
+		margin-bottom: 50rpx;
+		padding: 0 30rpx;
+}
+.header-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-right: -30rpx;
+		position: relative;
+		padding: 20rpx 0;
+}
+.title {
+		font-size: 58rpx;
+		color: #ffecd8;
+		font-weight: bold;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
+}
+.subtitle-wrapper {
+		background: #302f35;
+		padding: 6rpx 16rpx;
+		border-radius: 24rpx;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: -webkit-fit-content;
+		width: fit-content;
+		margin-left: auto;
+}
+.subtitle {
+		font-size: 28rpx;
+		color: #ffecd8;
+		opacity: 0.8;
+		text-align: center;
+		white-space: nowrap;
+}
+.vip-info-card {
+		background: linear-gradient(135deg, #ffe4d6 0%, #ffc4b7 100%);
+		border-radius: 24rpx;
+		padding: 30rpx;
+		margin-bottom: 30rpx;
+		margin-left: 30rpx;
+		margin-right: 30rpx;
+}
+.user-info {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20rpx;
+}
+.title-bg {
+		display: flex;
+		align-items: center;
+		background: rgba(0, 0, 0, 0.06);
+		padding: 8rpx 20rpx 8rpx 12rpx;
+		border-radius: 50rpx 0 0 50rpx;
+}
+.avatar-wrapper {
+		width: 48rpx;
+		height: 48rpx;
+		border-radius: 50%;
+		background: #ffffff;
+		padding: 2rpx;
+		margin-right: 8rpx;
+}
+.avatar {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+}
+.user-title {
+		font-size: 28rpx;
+		color: #a04a39;
+		font-weight: bold;
+}
+.time-info {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20rpx;
+		padding-left: 12rpx;
+}
+.days {
+		font-size: 64rpx;
+		font-weight: bold;
+		color: #862c13;
+		line-height: 1;
+}
+.unit {
+		font-size: 32rpx;
+		color: #862c13;
+		margin-left: 8rpx;
+		align-self: flex-end;
+		margin-bottom: 8rpx;
+}
+.time-arrow {
+		margin-left: 4rpx;
+		align-self: flex-end;
+		margin-bottom: 8rpx;
+}
+.exchange-btn {
+		margin-left: auto;
+		background: #ffffff;
+		padding: 12rpx 24rpx;
+		border-radius: 32rpx;
+		display: flex;
+		align-items: center;
+		gap: 4rpx;
+}
+.exchange-btn text {
+		font-size: 28rpx;
+		color: #862c13;
+		font-weight: bold;
+}
+.platform-tip {
+		text-align: center;
+		margin-bottom: 20rpx;
+		margin-left: 30rpx;
+		margin-right: 30rpx;
+}
+.platform-tip text {
+		font-size: 24rpx;
+		color: #ffecd8;
+}
+.platform-list {
+		width: 100%;
+		margin-bottom: 30rpx;
+		margin-right: 30rpx;
+		white-space: nowrap;
+}
+.platform-scroll {
+		display: inline-flex;
+		padding: 10rpx 0;
+		padding-right: 30rpx;
+        margin-left: 30rpx;
+}
+.platform-item {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: 30rpx;
+		width: 100rpx;
+		position: relative;
+}
+.platform-item.active::after {
+		content: '';
+		position: absolute;
+		bottom: -10rpx;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 30rpx;
+		height: 6rpx;
+		background-color: #ffecd8;
+		border-radius: 3rpx;
+}
+.platform-item image {
+		width: 80rpx;
+		height: 80rpx;
+		border-radius: 16rpx;
+		margin-bottom: 8rpx;
+}
+.platform-item text {
+		font-size: 24rpx;
+		color: #ffffff;
+		white-space: nowrap;
+}
+.package-list {
+		width: 100%;
+		white-space: nowrap;
+		margin-bottom: 20rpx;
+}
+.package-scroll {
+		display: inline-flex;
+		padding: 10rpx 0;
+		padding-right: 30rpx;
+		margin-left: 30rpx;
+}
+.package-item {
+		position: relative;
+		padding: 0;
+		border-radius: 16rpx;
+		background: linear-gradient(45deg, 
+			#ffffff 0%, 
+			#ffffff 60%, 
+			#f8d5af 100%
+		);
+		margin-right: 20rpx;
+		width: 220rpx;
+		height: 140rpx;
+		box-sizing: border-box;
+		border: 2rpx solid #ffecd8;
+}
+.package-tag {
+		position: absolute;
+		left: -2rpx;
+		top: -2rpx;
+		background: #4c4945;
+		color: #ffecd8;
+		font-size: 22rpx;
+		padding: 4rpx 12rpx;
+		border-radius: 16rpx 0 12rpx 0;
+}
+.package-content {
+		flex-direction: column;
+		position: relative;
+		padding: 46rpx 20rpx 24rpx;
+		z-index: 1;
+}
+.name-row {
+		display: flex;
+		align-items: center;
+		gap: 8rpx;
+}
+.package-name {
+		font-size: 22rpx;
+		color: #333333;
+}
+.month-tag {
+		font-size: 20rpx;
+		color: #6d542b;
+		font-weight: bold;
+		background-color: #efcd9b;
+		padding: 2rpx 8rpx;
+		border-radius: 10rpx 0 15rpx 0;
+}
+.price-info {
+		margin-top: auto;
+		display: flex;
+		align-items: baseline;
+}
+.price-row {
+		display: flex;
+		align-items: baseline;
+}
+.price-symbol {
+		font-size: 24rpx;
+		color: #fc3e2b;
+}
+.package-price {
+		font-size: 36rpx;
+		color: #fc3e2b;
+		font-weight: bold;
+}
+.duration-text {
+		font-size: 20rpx;
+		color: #c2615a;
+		margin-left: 4rpx;
+}
+.watch-btn {
+		background: linear-gradient(135deg, #fc3e2b 0%, #fa7154 100%);
+		height: 88rpx;
+		border-radius: 44rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20rpx;
+		margin-left: 30rpx;
+		margin-right: 30rpx;
+}
+.watch-btn text {
+		font-size: 32rpx;
+		color: #ffffff;
+		font-weight: 500;
+}
+.package-tip {
+		text-align: center;
+		margin-bottom: 40rpx;
+		margin-left: 30rpx;
+		margin-right: 30rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8rpx;
+}
+.package-tip text {
+		font-size: 24rpx;
+		color: #ffecd8;
+		opacity: 0.8;
+}
+	
+	/* 调整图标透明度以匹配文字 */
+.package-tip .uni-icons {
+		opacity: 0.8;
+}
+.banner-area {
+		padding: 0 30rpx;
+		margin-bottom: 40rpx;
+}
+.banner-image {
+		width: 100%;
+		border-radius: 16rpx;
+}
+.empty-package {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 220rpx;
+		height: 140rpx;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 16rpx;
+		margin-right: 20rpx;
+}
+.empty-package text {
+		font-size: 28rpx;
+		color: #ffecd8;
+		opacity: 0.8;
+}

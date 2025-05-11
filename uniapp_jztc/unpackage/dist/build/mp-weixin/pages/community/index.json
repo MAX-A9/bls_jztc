@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "tab-bar": "../../components/tab-bar/index",
+    "community-news": "../../components/community-news/index",
+    "uni-icons": "../../node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons"
+  }
+}

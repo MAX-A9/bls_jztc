@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "聊天详情",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationStyle": "default",
+  "usingComponents": {
+    "uni-icons": "../../node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons"
+  }
+}

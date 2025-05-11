@@ -1,0 +1,167 @@
+.sms-settings-container {
+  padding: 0;
+  width: 100%;
+}
+
+.sms-card {
+  border-radius: 16px;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  background: #fff;
+  border: none;
+}
+
+.sms-card .ant-card-body {
+  padding: 24px;
+}
+
+/* 短信设置标题区 */
+.sms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.sms-header::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.2), rgba(24, 144, 255, 0), rgba(24, 144, 255, 0));
+  bottom: 0;
+  left: 0;
+}
+
+.sms-header h4.ant-typography {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.sms-header h4.ant-typography::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 18px;
+  background: #1890ff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sms-table {
+  margin-top: 20px;
+}
+
+.sms-table .ant-table-thead > tr > th {
+  background-color: #f5f7fa;
+  color: #333;
+  font-weight: 500;
+}
+
+.status-tag {
+  min-width: 60px;
+  text-align: center;
+}
+
+/* 表单样式 */
+.sms-form {
+  margin: 0 auto;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+.section-divider {
+  margin: 24px 0;
+  color: #1890ff;
+  font-weight: bold;
+}
+
+/* 操作按钮区域 */
+.form-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .sms-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .sms-header h4 {
+    margin-bottom: 16px;
+  }
+  
+  .sms-form .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .sms-form .ant-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .sms-form .ant-radio-button-wrapper {
+    margin-right: 0;
+    margin-bottom: 8px;
+    border-radius: 2px !important;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .sms-form .ant-form-item-label {
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sms-header .ant-space {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sms-header .ant-btn {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+/* 表单元素自适应 */
+.sms-form .ant-input, 
+.sms-form .ant-select,
+.sms-form .ant-input-password,
+.sms-form .ant-btn {
+  width: 100%;
+}
+
+/* 卡片内容溢出处理 */
+.ant-card-body {
+  overflow-x: auto;
+}
+
+/* 表格行样式 */
+.ant-table-tbody > tr:hover > td {
+  background-color: #f0f7ff !important;
+}
+
+/* 表格内操作按钮组 */
+.ant-space {
+  flex-wrap: nowrap;
+} 

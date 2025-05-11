@@ -1,0 +1,17 @@
+/* 订单管理页面样式 */
+
+/* 订单详情样式 */
+.order-details {
+  margin: 16px 0;
+}
+
+.order-details p {
+  margin-bottom: 12px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.order-details strong {
+  color: rgba(0, 0, 0, 0.85);
+  margin-right: 8px;
+} 

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "消息",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "tab-bar": "../../components/tab-bar/index",
+    "uni-icons": "../../node-modules/@dcloudio/uni-ui/lib/uni-icons/uni-icons",
+    "uni-swipe-action-item": "../../node-modules/@dcloudio/uni-ui/lib/uni-swipe-action-item/uni-swipe-action-item",
+    "uni-swipe-action": "../../node-modules/@dcloudio/uni-ui/lib/uni-swipe-action/uni-swipe-action"
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";const e=require("../utils/request.js");const t=Object.freeze(Object.defineProperty({__proto__:null,getBaseSettings:function(){return e.get("/wx/mini-program/base/settings")}},Symbol.toStringTag,{value:"Module"}));exports.settingsApi=t;

@@ -1,0 +1,226 @@
+
+.container {
+		min-height: 100vh;
+		background-color: #f5f5f5;
+		position: relative;
+}
+.search-header {
+		padding: 20rpx 30rpx;
+		background-color: #ffffff;
+}
+.search-box {
+		display: flex;
+		align-items: center;
+		background-color: #f5f5f5;
+		padding: 0 24rpx;
+		border-radius: 36rpx;
+		height: 72rpx;
+}
+.search-box input {
+		flex: 1;
+		margin-left: 16rpx;
+		font-size: 28rpx;
+		height: 100%;
+}
+.placeholder {
+		color: #999999;
+		font-size: 28rpx;
+}
+.content-scroll {
+		height: calc(100vh - 112rpx);
+}
+.location-section {
+		background-color: #ffffff;
+		margin-bottom: 20rpx;
+		padding: 0 30rpx;
+}
+.section-title {
+		font-size: 28rpx;
+		color: #999999;
+		padding: 20rpx 0;
+}
+.current-location {
+		display: flex;
+		align-items: center;
+		padding: 20rpx 0;
+		border-top: 1rpx solid #f5f5f5;
+}
+.location-icon {
+		margin-right: 16rpx;
+}
+.location-info {
+		display: flex;
+		flex-direction: column;
+}
+.location-name {
+		font-size: 30rpx;
+		color: #333333;
+		margin-bottom: 6rpx;
+}
+.location-status {
+		font-size: 24rpx;
+		color: #999999;
+}
+.location-list {
+		display: flex;
+		flex-wrap: wrap;
+}
+.location-item {
+		padding: 20rpx 0;
+		margin-right: 40rpx;
+		font-size: 30rpx;
+		color: #333333;
+}
+.location-grid {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 20rpx;
+}
+.grid-item {
+		width: 25%;
+		height: 80rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 28rpx;
+		color: #333333;
+		margin-bottom: 20rpx;
+}
+.grid-item text {
+		padding: 10rpx 30rpx;
+		background-color: #f5f5f5;
+		border-radius: 8rpx;
+}
+.city-list {
+		background-color: #ffffff;
+}
+.city-section {
+		padding: 0 30rpx;
+}
+.city-letter {
+		font-size: 28rpx;
+		color: #999999;
+		padding: 20rpx 0;
+		background-color: #f5f5f5;
+		margin: 0 -30rpx;
+		padding-left: 30rpx;
+}
+.city-items {
+		padding: 10rpx 0;
+}
+.city-item {
+		padding: 20rpx 0;
+		font-size: 30rpx;
+		color: #333333;
+		border-bottom: 1rpx solid #f5f5f5;
+}
+.letter-index {
+		position: fixed;
+		right: 20rpx;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		flex-direction: column;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 30rpx;
+		padding: 10rpx 0;
+		z-index: 10;
+		box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+.letter-item {
+		width: 40rpx;
+		height: 40rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		padding: 4rpx 0;
+}
+.letter-item:active {
+		background-color: rgba(252, 62, 43, 0.1);
+}
+.letter-item:active text {
+		color: #fc3e2b;
+}
+.letter-item text {
+		font-size: 24rpx;
+		color: #666666;
+		font-weight: 500;
+}
+	
+	/* 优化字母索引区域的触摸体验 */
+.letter-index {
+		padding: 10rpx 6rpx;
+}
+.letter-item {
+		width: 50rpx;
+}
+.letter-indicator {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 120rpx;
+		height: 120rpx;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 16rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 100;
+}
+.letter-indicator text {
+		font-size: 80rpx;
+		color: #ffffff;
+		font-weight: bold;
+}
+	
+	/* 加载提示样式 */
+.loading-tip {
+		padding: 30rpx;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+.loading-icon {
+		width: 40rpx;
+		height: 40rpx;
+		margin-bottom: 10rpx;
+		border: 4rpx solid #f5f5f5;
+		border-top: 4rpx solid #fc3e2b;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg);
+}
+100% { transform: rotate(360deg);
+}
+}
+.loading-tip text {
+		font-size: 28rpx;
+		color: #999;
+}
+	
+	/* 错误提示样式 */
+.error-tip {
+		padding: 40rpx;
+		text-align: center;
+}
+.error-tip text {
+		font-size: 28rpx;
+		color: #999;
+		display: block;
+		margin-bottom: 20rpx;
+}
+.retry-btn {
+		width: 200rpx;
+		height: 70rpx;
+		font-size: 28rpx;
+		line-height: 70rpx;
+		border-radius: 35rpx;
+		background-color: #fc3e2b;
+		color: #fff;
+}

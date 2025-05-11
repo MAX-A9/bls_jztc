@@ -1,0 +1,1 @@
+"use strict";const e=require("../utils/request.js");const t=Object.freeze(Object.defineProperty({__proto__:null,getAgreement:function(t){return e.get("/wx/agreement/get",t)}},Symbol.toStringTag,{value:"Module"}));exports.agreementApi=t;
