@@ -1,5 +1,8 @@
 ## 前后端全部开源同城微信小程序（Goframe + uniapp）
 
+## gitee仓库
+* https://gitee.com/lookgos1/jz_tc
+
 ### QQ交流群
 <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=cqdDWhjH05oC8FkSsejNeMbirHWO3Ng_&jump_from=webapi&authKey=3M91jbO/ceHsNcxtcyGMbzVS1I3kQTb/Sg/HUeXmBv9GSyWuxCEo74vkyfeN6vb2"><img border="0" src="https://img.shields.io/badge/点击加入-9518324-green.svg" alt="布鲁斯社区①群" title="布鲁斯社区①群"></a>
 
@@ -29,11 +32,14 @@
     * 打包后端 go run build
     * 打包前端 npm run build
 * 打包相关问题（支持前后端分离部署，也可以一起部署）
-    *前后端一起部署，将前端打包后的dist目录，放到resource目录中即可。
-    *前后端分离部署，需要在前端和后端中进行配置，前端在.env文件，后端在manifest/config目录中
+    * 前后端一起部署，将前端打包后的dist目录，放到resource目录中即可。
+    * 前后端分离部署，需要在前端和后端中进行配置，前端在.env文件，后端在manifest/config目录中
 * 本地环境
     * http://localhost:8000/swagger（文档地址，可在config中关闭）
     * 小程序constants.js中配置域名
+* 管理员初始账号
+    * admin
+    * Admin123
 
 ## 页面展示
 ### 接口文档
