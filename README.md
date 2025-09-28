@@ -1,3 +1,10 @@
+<!--
+ * @Author: bls
+ * @Date: 2025-05-11 14:48:04
+ * @LastEditors: bls
+ * @LastEditTime: 2025-09-28 16:21:28
+ * @Description: 
+-->
 ## 前后端全部开源同城微信小程序（Goframe + uniapp）
 
 ### QQ交流群
@@ -17,6 +24,11 @@
 - 推荐Watch、Star项目，获取项目第一时间更新，同时也是对项目最好的支持
 - 希望大家多多支持原创作品
 - 禁止添加授权二次销售，如若发现，后果自负
+
+## 文件声明
+- demo目录为goframe后端
+- jztc目录为管理后台前端
+- uniapp_jztc目录为小程序源码
 
 ## 安装教程
 
